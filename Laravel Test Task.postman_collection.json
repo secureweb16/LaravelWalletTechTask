@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "9be3c301-b25c-4e67-9db0-7dbdac7b649d",
+		"name": "Laravel Test Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				},
+				"description": "Request:-email and password"
+			},
+			"response": []
+		},
+		{
+			"name": "addMoney",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5N2E3YTBkZS03MTcxLTQ1ZDAtOWEzMi0yMWU2ZTlhNTEyNDciLCJqdGkiOiI3ODZjMzI1NWQyN2E5Yjc3ZmUxMTE4ZDRmNjYzZThjODRkZmI5ZjVhMTQwZWQ4MTBlZTdiNzg3MGIwMDEyYmFiOTE0YWEyYjEzMDBjYTgyOSIsImlhdCI6MTY2NzQ2ODY4My4xOTgwNDcsIm5iZiI6MTY2NzQ2ODY4My4xOTgwNSwiZXhwIjoxNjk5MDA0NjgzLjE4OTIyMywic3ViIjoiMSIsInNjb3BlcyI6W119.R_RWcRnUYqcq37NL73bwVwUsh_Eb3U2Y2EqXONJp_MxJiZImw0VjyNLcInyFohIaZTxQldNxlrnFrIVyoQ03_YoWO_xu7ZO1BdRLrDQYFBSvGqByRuD6ZuhOQlhRqCvYgQy4d8EKpy1ByVyVXgMCCHYIcyLCJhEBZRbwDawmvXqRNv5dofWz_pHA4T8M5GftPt_thjw33lJTIhQHqMfGEP5UgDqtoMUprdPEAS1dHDJCQlmqyxu7GJRij6VB6PKT36e6PGr73Wz4i4GRMrLBQM0j1Zwdyue4WpBTEoq3HL5sTFHK_nRmidXdbVL5Mm6utgBfIQUf8xTQu9y0PyIDbsX-wJpymluqRVGStdcE-615fWUzEJ3fFuJubtpF1nTU_VZM0za3ZodtAvGnIrHViVzo8PqZ4tWM6DbtxSHXrvP7lO5StQPspQwQHsIuLRvj2MkbkNrkuSEnWANjEcFsDyNYmYh4DvzsCHVS6vht7_oBLkSWF3WWy8rMUr4th0SAlt8TBXpE2Vmqu1IP8bDAID9kvRfStRcgLTwkI4koIZFshCfEAMMWLMdmW62LmMLw4o6ocEqK9WsjchWI9fuPoaLJtzKHX3F2mgcde4X0kbZ2rfSPquDoQ0noK6Kn90-V8vpQEJLRryxzTsNDeonNx3C8Wi-HetB1ucNwlkFMNHg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/add-money",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"add-money"
+					]
+				},
+				"description": "Request\n1) pass  bearer token\n2) amount"
+			},
+			"response": []
+		},
+		{
+			"name": "withdrawMoney",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5N2E3YTBkZS03MTcxLTQ1ZDAtOWEzMi0yMWU2ZTlhNTEyNDciLCJqdGkiOiI3ODZjMzI1NWQyN2E5Yjc3ZmUxMTE4ZDRmNjYzZThjODRkZmI5ZjVhMTQwZWQ4MTBlZTdiNzg3MGIwMDEyYmFiOTE0YWEyYjEzMDBjYTgyOSIsImlhdCI6MTY2NzQ2ODY4My4xOTgwNDcsIm5iZiI6MTY2NzQ2ODY4My4xOTgwNSwiZXhwIjoxNjk5MDA0NjgzLjE4OTIyMywic3ViIjoiMSIsInNjb3BlcyI6W119.R_RWcRnUYqcq37NL73bwVwUsh_Eb3U2Y2EqXONJp_MxJiZImw0VjyNLcInyFohIaZTxQldNxlrnFrIVyoQ03_YoWO_xu7ZO1BdRLrDQYFBSvGqByRuD6ZuhOQlhRqCvYgQy4d8EKpy1ByVyVXgMCCHYIcyLCJhEBZRbwDawmvXqRNv5dofWz_pHA4T8M5GftPt_thjw33lJTIhQHqMfGEP5UgDqtoMUprdPEAS1dHDJCQlmqyxu7GJRij6VB6PKT36e6PGr73Wz4i4GRMrLBQM0j1Zwdyue4WpBTEoq3HL5sTFHK_nRmidXdbVL5Mm6utgBfIQUf8xTQu9y0PyIDbsX-wJpymluqRVGStdcE-615fWUzEJ3fFuJubtpF1nTU_VZM0za3ZodtAvGnIrHViVzo8PqZ4tWM6DbtxSHXrvP7lO5StQPspQwQHsIuLRvj2MkbkNrkuSEnWANjEcFsDyNYmYh4DvzsCHVS6vht7_oBLkSWF3WWy8rMUr4th0SAlt8TBXpE2Vmqu1IP8bDAID9kvRfStRcgLTwkI4koIZFshCfEAMMWLMdmW62LmMLw4o6ocEqK9WsjchWI9fuPoaLJtzKHX3F2mgcde4X0kbZ2rfSPquDoQ0noK6Kn90-V8vpQEJLRryxzTsNDeonNx3C8Wi-HetB1ucNwlkFMNHg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quantity\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/buy/cookie",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"buy",
+						"cookie"
+					]
+				},
+				"description": "Request\n1)Bearer token\n2) quantity"
+			},
+			"response": []
+		}
+	]
+}
